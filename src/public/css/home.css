@@ -1,0 +1,629 @@
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    position: sticky;
+    top:0;
+    height: 70px;
+
+    background: #111827;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 6%;
+
+    color: white;
+
+    gap: 40px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    background: #2563eb;
+
+    padding: 8px 10px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 25px;
+
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: #d1d5db;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+}
+
+.logout-btn {
+    background: #dc2626;
+
+    color: white;
+
+    padding: 9px 17px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.login-btn {
+    background: #0ee443;
+
+    color: white;
+
+    padding: 9px 17px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    min-height: 470px;
+
+    padding: 70px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 60px;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #1e3a8a
+    );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+
+    padding: 6px 14px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #60a5fa;
+}
+
+.hero p {
+    font-size: 17px;
+
+    color: #d1d5db;
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 12px 25px;
+
+    border-radius: 7px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #2563eb;
+
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+.secondary-btn {
+    border: 1px solid #94a3b8;
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+
+    color: #111827;
+}
+
+
+/* ========================================
+   SYSTEM STATUS CARD
+======================================== */
+
+.hero-card {
+    width: 380px;
+
+    background: white;
+
+    color: #1f2937;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+}
+
+.status {
+    color: #16a34a;
+
+    font-size: 13px;
+}
+
+.system-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.system-item:last-child {
+    border-bottom: none;
+}
+
+.icon {
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: bold;
+
+    color: white;
+}
+
+.node {
+    background: #16a34a;
+}
+
+.postgres {
+    background: #2563eb;
+}
+
+.kafka {
+    background: #f59e0b;
+}
+
+.system-item div:nth-child(2) {
+    flex: 1;
+}
+
+.system-item p {
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+.online {
+    font-size: 12px;
+
+    color: #16a34a;
+}
+
+
+/* ========================================
+   STATISTICS
+======================================== */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding: 40px 8%;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.06);
+}
+
+.stat-icon {
+    font-size: 30px;
+}
+
+.stat-card p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #6b7280;
+}
+
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.features {
+    padding: 60px 8%;
+
+    background: white;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card a {
+    color: #2563eb;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   FIFO SECTION
+======================================== */
+
+.fifo-section {
+    padding: 70px 8%;
+}
+
+.fifo-flow {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.flow-card {
+    background: white;
+
+    padding: 25px;
+
+    width: 220px;
+
+    min-height: 190px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.06);
+}
+
+.flow-number {
+    display: inline-flex;
+
+    width: 35px;
+
+    height: 35px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    margin-bottom: 12px;
+}
+
+.flow-card p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-top: 10px;
+}
+
+.arrow {
+    font-size: 30px;
+
+    color: #2563eb;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #111827;
+
+    color: #9ca3af;
+
+    padding: 25px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .feature-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .fifo-flow {
+        flex-wrap: wrap;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+
+        padding: 30px 5%;
+    }
+
+    .features {
+        padding: 50px 5%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fifo-section {
+        padding: 50px 5%;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventory Management System</title>
+
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/inventory_form.css">
+    <link rel="stylesheet" href="/css/logIn.css">
+     <link rel="stylesheet" href="/css/sale.css">
+     <link rel="stylesheet" href="/css/transactions.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>IMS</span>
+            Inventory Management
+        </div>
+
+        <div class="nav-links">
+
+             <a href="/" class="active">
+                Home
+            </a>
+
+            <a href="/api/dashboard" class="active">
+                Dashboard
+            </a>
+
+            <a href="/api/purchase" class="active">
+                Purchase
+            </a>
+
+            <a href="/api/sales" class="active">
+                Sales
+            </a>
+
+            <a href="/api/transactions" class="active">
+                Transactions
+            </a>
+
+        </div>
+
+        <% if(locals.userName){%>
+            <div class="">
+                <%= userName%>
+            </div>
+
+            <a href="/api/login/logout" class="logout-btn">
+                Logout
+            </a>
+        <%}else{%>
+            <a href="/api/login" class="login-btn">
+                LogIn
+            </a>
+        <%}%>
+    </nav>
+    <main>
+        <%-body%>
+    </main>
+       
+</body>
+
+</html>

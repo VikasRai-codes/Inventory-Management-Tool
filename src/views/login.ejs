@@ -1,0 +1,37 @@
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>INVENTORY MANAGEMENT</h1>
+            <h2>FIFO SYSTEM</h2>
+
+            <form action="/api/login" method="POST">
+
+                <div class="input-group">
+                    <label for="userId">User ID</label>
+                    <input
+                        type="email"
+                        id="userId"
+                        name="email"
+                        placeholder="Enter User Email"
+                        required
+                    >
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter Password"
+                        required
+                    >
+                </div>
+                <button type="submit" value="login">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<body>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                Real-Time Inventory System
+            </div>
+
+            <h1>
+                Smart Inventory Management
+                <span>with FIFO System</span>
+            </h1>
+
+            <p>
+                Manage your inventory efficiently with
+                real-time Kafka event processing,
+                PostgreSQL database management,
+                and FIFO-based stock costing.
+            </p>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="card-header">
+                <span>System Status</span>
+
+                <span class="status">
+                    ● Online
+                </span>
+            </div>
+
+            <div class="system-item">
+
+                <div class="icon node">
+                    N
+                </div>
+
+                <div>
+                    <strong>Node.js</strong>
+                    <p>Backend API</p>
+                </div>
+
+                <span class="online">
+                    Active
+                </span>
+
+            </div>
+
+
+            <div class="system-item">
+
+                <div class="icon postgres">
+                    P
+                </div>
+
+                <div>
+                    <strong>PostgreSQL</strong>
+                    <p>Database</p>
+                </div>
+
+                <span class="online">
+                    Connected
+                </span>
+
+            </div>
+
+
+            <div class="system-item">
+
+                <div class="icon kafka">
+                    K
+                </div>
+
+                <div>
+                    <strong>Apache Kafka</strong>
+                    <p>Event Streaming</p>
+                </div>
+
+                <span class="online">
+                    Running
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FIFO PROCESS ================= -->
+
+    <section class="fifo-section">
+
+        <div class="section-title">
+
+            <h2>
+                How FIFO Inventory Works
+            </h2>
+
+            <p>
+                Your inventory cost is calculated automatically
+                using the First-In-First-Out method.
+            </p>
+
+        </div>
+
+
+        <div class="fifo-flow">
+
+            <div class="flow-card">
+
+                <span class="flow-number">
+                    01
+                </span>
+
+                <h3>
+                    Purchase
+                </h3>
+
+                <p>
+                    New inventory is added as a
+                    separate inventory batch.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+
+            <div class="flow-card">
+
+                <span class="flow-number">
+                    02
+                </span>
+
+                <h3>
+                    Kafka Event
+                </h3>
+
+                <p>
+                    Purchase event is published
+                    to the inventory-events topic.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+
+            <div class="flow-card">
+
+                <span class="flow-number">
+                    03
+                </span>
+
+                <h3>
+                    FIFO Processing
+                </h3>
+
+                <p>
+                    Oldest inventory batch is consumed
+                    first during a sale.
+                </p>
+
+            </div>
+
+
+            <div class="arrow">
+                →
+            </div>
+
+
+            <div class="flow-card">
+
+                <span class="flow-number">
+                    04
+                </span>
+
+                <h3>
+                    PostgreSQL
+                </h3>
+
+                <p>
+                    Updated stock and transaction
+                    details are stored in database.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Inventory Management System
+        </p>
+
+        <p>
+            Node.js | PostgreSQL | Apache Kafka | FIFO
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+

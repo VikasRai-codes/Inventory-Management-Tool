@@ -1,0 +1,65 @@
+
+<body>
+    <!-- Main Content -->
+    <main class="dashboard">
+
+        <!-- Summary Cards -->
+        <section class="summary-section">
+
+            <div class="summary-card">
+                <h3>Total Products</h3>
+                <p><%=totalCount%></p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Stock</h3>
+                <p><%=totalStock%></p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Inventory Value</h3>
+                <p>₹<%=formattedCost%></p>
+            </div>
+
+        </section>
+
+
+        <!-- Product Stock Overview -->
+        <section class="stock-section">
+
+            <h2>PRODUCT STOCK OVERVIEW</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Inventory Cost</th>
+                            <th>Avg. Cost</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    <% inventoryList.forEach((row)=>{%>
+                        <tr>
+                            <td><%=row.product_id%></td>
+                            <td><%=row.total_qty%></td>
+                            <td>₹<%=row.total_cost%></td>
+                            <td>₹<%=row.average_cost%></td>
+                        </tr>
+                    <%})%>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<body>
+    <main class="dashboard">
+         <div class="ledger-container">
+
+        <h1>TRANSACTION LEDGER</h1>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Product</th>
+                        <th>Type</th>
+                        <th>Quantity</th>
+                        <th>Unit Cost</th>
+                        <th>FIFO</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <%transactions.forEach((ledger)=>{%>
+                    <tr>
+                        <td><%= new Date(ledger.timestamp).toLocaleString("en-IN", {
+                                day: "2-digit",
+                                month: "2-digit",
+                                year: "numeric",
+                                hour: "2-digit",
+                                minute: "2-digit",
+                                hour12: true
+                            }) %></td>
+                        <td><%=ledger.product_id%></td>
+                        <td>
+                            <span class="badge <%=ledger.type%>">
+                                <%=ledger.type%>
+                            </span>
+                        </td>
+                        <td><%=ledger.qty%></td>
+                        <td><%=ledger.unit_cost > 0 ? Intl.NumberFormat("en-IN").format(ledger.unit_cost) : "-" %></td>
+                        <td><%=ledger.fifo > 0 ? Intl.NumberFormat("en-IN").format(ledger.fifo) : "-" %></td>
+                    </tr>
+                    <%});%>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+    </main>
+
+</body>
+</html>

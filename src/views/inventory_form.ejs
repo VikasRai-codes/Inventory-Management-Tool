@@ -1,0 +1,52 @@
+<body>
+    <main class="dashboard">
+    <div class="form-container">
+
+        <div class="form-header">
+            <h1>Purchase Inventory</h1>
+            <p>Add new stock to your inventory</p>
+        </div>
+
+        <form action="/api/purchase/add" method="POST">
+
+            <div class="form-group">
+                <label for="product_id">Product ID</label>
+                <input type="text" id="product_id" name="productId" placeholder="Enter Product ID (e.g. 1001)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="qty" placeholder="Enter quantity" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="unit_price">Unit Price</label>
+                <input type="number" id="unit_price" name="unit_price" placeholder="Enter purchase price" min="0"
+                    step="0.01" required>
+            </div>
+
+            <button type="submit" class="btn purchase-btn">
+                Add Purchase
+            </button>
+
+        </form>
+
+        
+        <% if (success) { %>
+            <div class="message success-message">
+                <span>✓</span>
+                <p>
+                    <%= success %>
+                </p>
+            </div><% } %>
+
+        <% if (error) { %>
+            <div class="message error-message"> <span>✕</span>
+                <p><%= error %></p>
+             </div><% } %>
+   
+    </div>
+</main>
+</body>
+
+</html>
